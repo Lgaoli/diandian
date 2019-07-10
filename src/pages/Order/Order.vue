@@ -62,7 +62,7 @@
                   <div class="shopimg" style="padding:1.3rem">
                     <img src="../../assets/img/img_empty_shopping_cart.png">
                   </div>
-                  <p style="color:#9FA4A5;font-size:1.5rem">购物车还是空的，快去逛逛吧~</p>
+                  <p style="color:#9FA4A5;font-size:1.5rem">暂时没有订单，快去逛逛吧~</p>
                   <router-link to="/My">
                     <div
                       class="shopbut"
@@ -119,7 +119,7 @@
                   <div class="shopimg" style="padding:1.3rem">
                     <img src="../../assets/img/img_empty_shopping_cart.png">
                   </div>
-                  <p style="color:#9FA4A5;font-size:1.5rem">购物车还是空的，快去逛逛吧~</p>
+                  <p style="color:#9FA4A5;font-size:1.5rem">暂时没有订单，快去逛逛吧~</p>
                   <router-link to="/My">
                     <div
                       class="shopbut"
@@ -185,7 +185,7 @@
                   <div class="shopimg" style="padding:1.3rem">
                     <img src="../../assets/img/img_empty_shopping_cart.png">
                   </div>
-                  <p style="color:#9FA4A5;font-size:1.5rem">购物车还是空的，快去逛逛吧~</p>
+                  <p style="color:#9FA4A5;font-size:1.5rem">暂时没有订单，快去逛逛吧~</p>
                   <router-link to="/My">
                     <div
                       class="shopbut"
@@ -251,7 +251,7 @@
                   <div class="shopimg" style="padding:1.3rem">
                     <img src="../../assets/img/img_empty_shopping_cart.png">
                   </div>
-                  <p style="color:#9FA4A5;font-size:1.5rem">购物车还是空的，快去逛逛吧~</p>
+                  <p style="color:#9FA4A5;font-size:1.5rem">暂时没有订单，快去逛逛吧~</p>
                   <router-link to="/My">
                     <div
                       class="shopbut"
@@ -316,7 +316,7 @@
                   <div class="shopimg" style="padding:1.3rem">
                     <img src="../../assets/img/img_empty_shopping_cart.png">
                   </div>
-                  <p style="color:#9FA4A5;font-size:1.5rem">购物车还是空的，快去逛逛吧~</p>
+                  <p style="color:#9FA4A5;font-size:1.5rem">暂时没有订单，快去逛逛吧~</p>
                   <router-link to="/My">
                     <div
                       class="shopbut"
@@ -381,7 +381,7 @@
                   <div class="shopimg" style="padding:1.3rem">
                     <img src="../../assets/img/img_empty_shopping_cart.png">
                   </div>
-                  <p style="color:#9FA4A5;font-size:1.5rem">购物车还是空的，快去逛逛吧~</p>
+                  <p style="color:#9FA4A5;font-size:1.5rem">暂时没有订单，快去逛逛吧~</p>
                   <router-link to="/My">
                     <div
                       class="shopbut"
@@ -446,7 +446,7 @@
                   <div class="shopimg" style="padding:1.3rem">
                     <img src="../../assets/img/img_empty_shopping_cart.png">
                   </div>
-                  <p style="color:#9FA4A5;font-size:1.5rem">购物车还是空的，快去逛逛吧~</p>
+                  <p style="color:#9FA4A5;font-size:1.5rem">暂时没有订单，快去逛逛吧~</p>
                   <router-link to="/My">
                     <div
                       class="shopbut"
@@ -494,8 +494,8 @@ export default {
       nopayment: [], //未付款
       noshipments: [], //待发货
       nopaymentli1: [], //待收货
-
-      all: []
+      nopevaluate: [], //待评价
+      all: [] //全部订单
     };
   },
   created() {
@@ -506,7 +506,7 @@ export default {
       url: "https://api.ddjingxuan.cn/api/v2/order/all",
 
       headers: {
-        token: "45477fc38e40b7de258d5868d4ceaa08"
+        token: "639b6ab402a8e9d00db9b11b72858f99"
       }
     }).then(res => {
       if (res.data.error_code == 0) {
@@ -529,7 +529,7 @@ export default {
             id: item.id
           },
           headers: {
-            token: "45477fc38e40b7de258d5868d4ceaa08"
+            token: "639b6ab402a8e9d00db9b11b72858f99"
           }
         }).then(res => {
           if (res.data.error_code == 0) {

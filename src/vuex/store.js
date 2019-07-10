@@ -86,9 +86,7 @@ const store = new Vuex.Store({
     },
     mutations: {
         setToken(state, token) {
-   
             state.token = token
-          
         }, del_token(state) {
             state.token = ''
             sessionStorage.removeItem('token')

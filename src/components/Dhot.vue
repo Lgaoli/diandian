@@ -38,7 +38,7 @@ export default {
     this.$axios
       .get("https://api.ddjingxuan.cn/api/v2/goods/hot")
       .then(function(res) {
-        console.log(res)
+   
         that.hotlist = res.data;
       })
       .catch(function(error) {
